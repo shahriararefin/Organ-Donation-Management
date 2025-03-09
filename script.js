@@ -24,24 +24,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Dark Mode Toggle
-    const darkModeToggle = document.querySelector("#darkModeToggle");
-    const body = document.body;
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark");
-        darkModeToggle.textContent = "☀️"; // Sun icon for dark mode
-    }
+// Dark Mode Toggle
+const darkModeToggle = document.querySelector("#darkModeToggle");
+const body = document.body;
 
-    darkModeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark");
-        if (body.classList.contains("dark")) {
-            localStorage.setItem("darkMode", "enabled");
-            darkModeToggle.textContent = "☀️";
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-            darkModeToggle.textContent = "🌙";
-        }
-    });
+// Check if dark mode was previously enabled in localStorage
+if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark"); // Enable dark mode
+    darkModeToggle.textContent = "☀️"; // Change icon to sun (dark mode is on)
+} else {
+    body.classList.remove("dark"); // Ensure dark mode is off if not enabled
+    darkModeToggle.textContent = "🌙"; // Change icon to moon (dark mode is off)
+}
+
+// Toggle dark mode on button click
+darkModeToggle.addEventListener("click", function () {
+    body.classList.toggle("dark"); // Toggle dark mode on body
+
+    // Save the user's preference in localStorage
+    if (body.classList.contains("dark")) {
+        localStorage.setItem("darkMode", "enabled");
+        darkModeToggle.textContent = "☀️"; // Change to sun icon when dark mode is enabled
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+        darkModeToggle.textContent = "🌙"; // Change to moon icon when dark mode is disabled
+    }
+});
 
     // FAQ Toggle
     const faqToggles = document.querySelectorAll(".faq-toggle");

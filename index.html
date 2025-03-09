@@ -6,17 +6,12 @@
     <title>Organ Donation Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
-    <style>
-        .dark {
-            background-color: #1a202c;
-            color: white;
-        }
-    </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-gray-800 dark:text-white">
 
     <!-- Navbar -->
     <nav class="navbar bg-base-100 shadow-md px-6">
+        <button id="darkModeToggle" class="btn btn-outline ml-4">🌙</button>
         <div class="flex-1">
             <a href="index.html" class="text-xl font-bold text-primary">DO.ORG</a>
         </div>
@@ -27,7 +22,6 @@
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="research.html">Research</a></li>
             </ul>
-            <button id="darkModeToggle" class="btn btn-outline ml-4">🌙</button>
         </div>
     </nav>
 
