@@ -8,9 +8,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
 </head>
 <body class="bg-gray-100">
+
+    <!-- Header -->
     <header class="p-5 bg-white shadow-md flex justify-between items-center">
-        <a href="/index.html"><img class="w-32" src="/Assets/Images/logo.png" alt="" srcset=""></a>
-            <ul class="flex space-x-4">
+        <a href="/index.html">
+            <img class="w-32" src="/Assets/Images/logo.png" alt="Logo">
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex space-x-4 items-center">
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left">
                 <li><a href="#" class="btn btn-primary">Home</a></li>
                 <li><a href="#" class="btn btn-outline">Register</a></li>
                 <li><a href="#" class="btn btn-outline">Organ Registration</a></li>
@@ -18,36 +33,63 @@
                 <li><a href="#" class="btn btn-outline">Research</a></li>
             </ul>
         </nav>
-        <div>
+
+        <!-- Login & Signup Buttons -->
+        <div class="hidden md:flex space-x-2">
             <a href="login/login.html"><button class="btn btn-secondary">Login</button></a>
             <a href="/signup/signup.html"><button class="btn btn-accent">Sign Up</button></a>
         </div>
     </header>
 
-    <main class="container mx-auto my-10">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-white shadow-md p-4 space-y-4 absolute top-16 left-0 w-full">
+        <a href="#" class="btn btn-primary w-full text-center">Home</a>
+        <a href="#" class="btn btn-outline w-full text-center">Register</a>
+        <a href="#" class="btn btn-outline w-full text-center">Organ Registration</a>
+        <a href="#" class="btn btn-outline w-full text-center">FAQ</a>
+        <a href="#" class="btn btn-outline w-full text-center">Research</a>
+        <a href="login/login.html" class="btn btn-secondary w-full text-center">Login</a>
+        <a href="/signup/signup.html" class="btn btn-accent w-full text-center">Sign Up</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-900 text-white text-center p-10">
+        <h1 class="text-3xl md:text-5xl font-bold">Donate an Organ, Save a Life</h1>
+        <p class="mt-4 text-lg">Your decision to donate can change someone's life forever.</p>
+        <a href="#" class="btn btn-primary mt-4">Learn More</a>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-10 p-4">
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="card bg-blue-900 text-white p-4 rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Organ Donation" class="rounded-t-lg">
-                <h2 class="text-xl font-bold">What is Organ Donation?</h2>
+            <div class="card bg-blue-900 text-white p-4 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/150" alt="Organ Donation" class="rounded-t-lg w-full">
+                <h2 class="text-xl font-bold mt-2">What is Organ Donation?</h2>
+                <p class="mt-2 text-sm">Learn how organ donation works and its impact on lives.</p>
             </div>
-            <div class="card bg-blue-900 text-white p-4 rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="How does it work?" class="rounded-t-lg">
-                <h2 class="text-xl font-bold">How Does it Work?</h2>
+            <div class="card bg-blue-900 text-white p-4 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/150" alt="How does it work?" class="rounded-t-lg w-full">
+                <h2 class="text-xl font-bold mt-2">How Does it Work?</h2>
+                <p class="mt-2 text-sm">Understand the process of organ donation step by step.</p>
             </div>
-            <div class="card bg-blue-900 text-white p-4 rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Who Can Donate?" class="rounded-t-lg">
-                <h2 class="text-xl font-bold">Who Can Donate?</h2>
+            <div class="card bg-blue-900 text-white p-4 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/150" alt="Who Can Donate?" class="rounded-t-lg w-full">
+                <h2 class="text-xl font-bold mt-2">Who Can Donate?</h2>
+                <p class="mt-2 text-sm">Find out if you are eligible to donate an organ.</p>
             </div>
         </section>
         <div class="text-center my-6">
             <button class="btn btn-primary">Read More</button>
         </div>
     </main>
-    
+
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center p-4">
         <p>&copy; 2025 DO.ORG - Donate Organ, Save Life</p>
     </footer>
 
     <script src="/Js/index.js"></script>
+   
+
 </body>
 </html>
