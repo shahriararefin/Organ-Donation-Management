@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Organ Donation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@latest"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-2xl w-full flex">
+        <!-- Left Side - Illustration -->
+        <div class="w-1/2 flex justify-center items-center">
+            <img src="https://via.placeholder.com/150" alt="Illustration" class="w-32">
+        </div>
+
+        <!-- Right Side - Registration Form -->
+        <div class="w-1/2">
+            <h2 class="text-2xl font-bold text-pink-600 text-center mb-2">Create new Account</h2>
+            <p class="text-center text-sm mb-4">Already Registered? <a href="login.html" class="text-blue-500">Login</a></p>
+
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label class="block text-sm font-semibold">Please enter your name</label>
+                    <input id="name" type="text" placeholder="Name Place Holder" class="input input-bordered w-full bg-orange-200" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="block text-sm font-semibold">Please enter your email</label>
+                    <input id="email" type="email" placeholder="hello@reallygreatsite.com" class="input input-bordered w-full bg-orange-200" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="block text-sm font-semibold">Please enter your password</label>
+                    <input id="password" type="password" placeholder="******" class="input input-bordered w-full bg-orange-200" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold">Please enter your date of birth</label>
+                    <input id="dob" type="date" class="input input-bordered w-full bg-orange-200" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary bg-red-500 text-white w-full">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="registration.js"></script>
+    <script src="server.js"></script>
+
+</body>
+</html>
