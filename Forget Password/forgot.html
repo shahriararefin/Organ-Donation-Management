@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - Donor Link</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
+    <link rel="icon" type="image/x-icon" href="/Assets/heartlogo.png">
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header Section -->
+    <header class="p-5 bg-white shadow-md flex justify-between items-center">
+        <a href="/index.html">
+            <img class="w-32" src="/Assets/DonorLink Logo.png" alt="Logo">
+        </a>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="/index.html" class="btn btn-outline">Home</a></li>
+                <li><a href="/donorReg/donorReg.html" class="btn btn-outline">Donor Registration</a></li>
+                <li><a href="/OrganReg/organReg.html" class="btn btn-outline">Organ Registration</a></li>
+                <li><a href="#" class="btn btn-outline">Explore</a></li>
+                <li><a href="/Research/research.html" class="btn btn-outline">Research</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="/login/login.html"><button class="btn btn-secondary">Login</button></a>
+            <a href="/signup/signup.html"><button class="btn btn-accent">Sign Up</button></a>
+        </div>
+    </header>
+
+    <!-- Password Reset Section -->
+    <main class="flex-grow flex items-center justify-center">
+        <div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
+            <h2 class="text-2xl font-bold text-center mb-4">Forgot Your Password?</h2>
+            <p class="text-center mb-4">Enter your email and we'll send you a link to reset your password.</p>
+            <form id="resetForm">
+                <div class="mb-4">
+                    <input id="email" type="email" placeholder="Enter your e-mail" class="input input-bordered w-full bg-pink-200 rounded-full p-2" required>
+                </div>
+                <button type="submit" class="btn btn-primary bg-blue-500 text-white w-full rounded-full p-4">RESET PASSWORD</button>
+            </form>
+            <div class="text-center mt-4">
+                <a href="/login/login.html" class="text-sm text-blue-500">← Back to Login</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+        <p>&copy; 2025 Donor Link - Donate Organ, Save Life</p>
+    </footer>
+
+
+    <script src="/Forget Password/forgot.js"></script>
+</body>
+</html>
