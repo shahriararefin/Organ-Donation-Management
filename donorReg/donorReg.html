@@ -4,59 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donor Link - Organ Donation</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
     <link rel="icon" type="image/x-icon" href="/Assets/heartlogo.png">
 </head>
-<body>
-    <header>
-        <div class="logo"> 
-            <img src="heartlogo.png" alt="Donor Link Logo">
-            <h1>Donor Link</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#" class="active">Register to be a donor</a></li>
-                <li><a href="#">Register For Organ</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Research</a></li>
+<body class="bg-hero-pattern bg-cover bg-center bg-no-repeat h-screen flex flex-col min-h-screen">
+
+    <!-- Header/Navbar (unchanged) -->
+    <header class="p-5 bg-white shadow-md flex justify-between items-center relative">
+        <a href="/index.html">
+            <img class="w-32" src="/Assets/DonorLink Logo.png" alt="Logo">
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex space-x-4 items-center">
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left">
+                <li><a href="#" class="btn btn-primary">Home</a></li>
+                <li><a href="/donorReg/donorReg.html" class="btn btn-outline">Donor Registration</a></li>
+                <li><a href="/OrganReg/organReg.html" class="btn btn-outline">Organ Registration</a></li>
+                <li><a href="#" class="btn btn-outline">Explore</a></li>
+                <li><a href="/Research/research.html" class="btn btn-outline">Research</a></li>
             </ul>
-            <input type="text" placeholder="Search...">
         </nav>
+
+        <!-- Login & Signup Buttons -->
+        <div class="hidden md:flex space-x-2">
+            <!-- <a href="/login/login.html"><button class="btn btn-secondary">Login</button></a>
+            <a href="/signup/signup.html"><button class="btn btn-accent">Sign Up</button></a> -->
+        </div>
     </header>
-    
-    <main>
-        <section class="consent-form">
-            <h2>IN THE CASE THAT ORGAN/TISSUE DONATION FOR TRANSPLANTATION IS POSSIBLE AFTER MY DEATH, I DECLARE:</h2>
-            <form>
-                <label><input type="radio" name="consent"> YES, I give permission for organs and tissue to be taken from my body after a doctor's certification of death.</label>
-                <label><input type="radio" name="consent"> YES, I give permission for the use of organs and tissue with the exception of the following:</label>
-                <textarea placeholder="Specify exceptions..."></textarea>
-                <label><input type="radio" name="consent"> YES, I give my permission only for the use of the following organs/tissues:</label>
-                <textarea placeholder="Specify allowed organs..."></textarea>
-                <label><input type="radio" name="consent"> NO, I do not wish organs or tissue to be taken from my body.</label>
-                
-                <div class="upload-section">
-                    <label>UPLOAD SIGNED CONSENT FORM:</label>
-                    <input type="file" id="file-upload">
-                    <button type="button" id="upload-btn">Upload</button>
+
+    <!-- Main Section (Updated to be functional and responsive) -->
+    <main class="container mx-auto my-10 p-4 flex-grow ">
+        <section class="consent-form max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg ">
+            <h2 class="text-2xl font-bold text-center mb-4">IN THE CASE THAT ORGAN/TISSUE DONATION FOR TRANSPLANTATION IS POSSIBLE AFTER MY DEATH, I DECLARE:</h2>
+            
+            <form class="space-y-6 ">
+                <!-- YES Permission -->
+                <div class="bg-gray-100">
+                    <label class="block text-lg">
+                        <input type="radio" name="consent" class="mr-2"> YES, I give permission for organs and tissue to be taken from my body after a doctor's certification of death.
+                    </label>
+                </div>
+
+                <!-- YES with Exceptions -->
+                <div class="bg-gray-100">
+                    <label class="block text-lg">
+                        <input type="radio" name="consent" class="mr-2"> YES, I give permission for the use of organs and tissue with the exception of the following:
+                    </label>
+                    <textarea placeholder="Specify exceptions..." class="w-full mt-2 p-2 border rounded-md" rows="4"></textarea>
+                </div>
+
+                <!-- YES with Specific Organs -->
+                <div class="bg-gray-100">
+                    <label class="block text-lg">
+                        <input type="radio" name="consent" class="mr-2"> YES, I give my permission only for the use of the following organs/tissues:
+                    </label>
+                    <textarea placeholder="Specify allowed organs..." class="w-full mt-2 p-2 border rounded-md" rows="4"></textarea>
+                </div>
+
+                <!-- NO Permission -->
+                <div class="bg-gray-100">
+                    <label class="block text-lg">
+                        <input type="radio" name="consent" class="mr-2"> NO, I do not wish organs or tissue to be taken from my body.
+                    </label>
+                </div>
+
+                <!-- File Upload Section -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-lg">UPLOAD SIGNED CONSENT FORM:</label>
+                        <input type="file" id="file-upload" class="w-full mt-2 p-2 border rounded-md">
+                    </div>
+
+                    <div class="flex justify-center">
+                        <button type="button" id="upload-btn" class="btn btn-primary mt-4">Upload</button>
+                    </div>
                 </div>
             </form>
         </section>
     </main>
-    
-    <footer>
-        <div class="about-us">
-            <h3>ABOUT US</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        </div>
-        <div class="social-links">
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-        </div>
+
+    <!-- Footer (unchanged) -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+        <p>&copy; 2025 Donor Link - Donate Organ, Save Life</p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
