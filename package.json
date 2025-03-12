@@ -1,0 +1,28 @@
+{
+  "name": "organ-donation-management",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahriararefin/Organ-Donation-Management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahriararefin/Organ-Donation-Management/issues"
+  },
+  "homepage": "https://github.com/shahriararefin/Organ-Donation-Management#readme",
+  "description": "",
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.2",
+    "postcss": "^8.5.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.0.13"
+  }
+}

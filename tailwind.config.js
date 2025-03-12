@@ -1,12 +1,13 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  content: ["./*.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+      backgroundImage: {
+        'hero-pattern': "url('/Assets/background.png')",
       },
     },
   },
-  // ...
-}
+};
+ 
