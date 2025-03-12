@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Link - Organ Donation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> 
+            <img src="heartlogo.png" alt="Donor Link Logo">
+            <h1>Donor Link</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Register to be a donor</a></li>
+                <li><a href="#">Register For Organ</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Research</a></li>
+            </ul>
+            <input type="text" placeholder="Search...">
+        </nav>
+    </header>
+    
+    <main>
+        <section class="consent-form">
+            <h2>IN THE CASE THAT ORGAN/TISSUE DONATION FOR TRANSPLANTATION IS POSSIBLE AFTER MY DEATH, I DECLARE:</h2>
+            <form>
+                <label><input type="radio" name="consent"> YES, I give permission for organs and tissue to be taken from my body after a doctor's certification of death.</label>
+                <label><input type="radio" name="consent"> YES, I give permission for the use of organs and tissue with the exception of the following:</label>
+                <textarea placeholder="Specify exceptions..."></textarea>
+                <label><input type="radio" name="consent"> YES, I give my permission only for the use of the following organs/tissues:</label>
+                <textarea placeholder="Specify allowed organs..."></textarea>
+                <label><input type="radio" name="consent"> NO, I do not wish organs or tissue to be taken from my body.</label>
+                
+                <div class="upload-section">
+                    <label>UPLOAD SIGNED CONSENT FORM:</label>
+                    <input type="file" id="file-upload">
+                    <button type="button" id="upload-btn">Upload</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="about-us">
+            <h3>ABOUT US</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="social-links">
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
