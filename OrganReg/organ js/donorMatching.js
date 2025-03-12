@@ -1,4 +1,5 @@
-document.getElementById('donorMatchingForm').addEventListener('submit', function(event) {
+// Handle form submission
+document.getElementById('donorMatchingForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const tissueType = document.getElementById('tissueType').value;
@@ -12,5 +13,18 @@ document.getElementById('donorMatchingForm').addEventListener('submit', function
         // You can add your form submission logic here
     } else {
         console.log('Please fill out all required fields');
+    }
+});
+
+// Toggle the menu for mobile view
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    if (menuBtn && menu) {
+        menuBtn.addEventListener("click", function () {
+            menu.classList.toggle("hidden");
+            console.log("Menu toggled!"); // Debugging log
+        });
     }
 });

@@ -3,48 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Organ Donation</title>
+    <title>Organ Link</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/daisyui@latest"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
     <link rel="icon" type="image/x-icon" href="/Assets/heartlogo.png">
 </head>
-<body class="bg-gray-100">
+<body class="bg-hero-pattern bg-cover bg-center bg-no-repeat h-screen flex flex-col min-h-screen">
 
-   <!-- Header -->
-   <header class="p-5 bg-white shadow-md flex justify-between items-center relative">
-    <a href="/index.html">
-        <img class="w-32" src="/Assets/DonorLink Logo.png" alt="Logo">
-    </a>
+    <!-- Header -->
+    <header class="p-5 bg-white shadow-md flex justify-between items-center relative">
+        <a href="/index.html">
+            <img class="w-32" src="/Assets/DonorLink Logo.png" alt="Logo">
+        </a>
 
-    <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
-        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-    </button>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="block md:hidden text-gray-700 focus:outline-none">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
 
-    <!-- Navigation Menu -->
-    <nav id="menu" class="hidden md:flex space-x-4 items-center">
-        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left">
-            <li><a href="#" class="btn btn-outline">Home</a></li>
-            <li><a href="#" class="btn btn-outline">Register</a></li>
-            <li><a href="#" class="btn btn-outline">Organ Registration</a></li>
-            <li><a href="#" class="btn btn-outline">FAQ</a></li>
-            <li><a href="#" class="btn btn-primary">Research</a></li>
-        </ul>
-    </nav>
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex space-x-4 items-center">
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left">
+                <li><a href="#" class="btn btn-outline">Home</a></li>
+                <li><a href="/donorReg/donorReg.html" class="btn btn-outline">Donor Registration</a></li>
+                <li><a href="/OrganReg/organReg.html" class="btn btn-outline">Organ Registration</a></li>
+                <li><a href="#" class="btn btn-outline">Explore</a></li>
+                <li><a href="/Research/research.html" class="btn btn-primary">Research</a></li>
+            </ul>
+        </nav>
 
-    <!-- Login & Signup Buttons -->
-    <div class="hidden md:flex space-x-2">
-        <a href="/login/login.html"><button class="btn btn-secondary">Login</button></a>
-        <a href="/signup/signup.html"><button class="btn btn-accent">Sign Up</button></a>
-    </div>
-</header>
+        <!-- Login & Signup Buttons -->
+        <div class="hidden md:flex space-x-2">
+            <!-- <a href="/login/login.html"><button class="btn btn-secondary">Login</button></a>
+            <a href="/signup/signup.html"><button class="btn btn-accent">Sign Up</button></a> -->
+        </div>
+    </header>
 
-    <!-- Research Section -->
-    <!-- Main Content -->
-    <main class="container mx-auto my-10 p-4 flex-grow">
+     <!-- Main Content -->
+     <main class="container mx-auto my-10 p-4 flex-grow">
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="card bg-blue-900 text-white p-4 rounded-lg shadow-lg">
                 <img src="https://via.placeholder.com/150" alt="Organ Donation" class="rounded-t-lg w-full">
@@ -67,15 +66,9 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white py-6 mt-8 text-center">
-        <h2 class="text-lg font-bold">ABOUT US</h2>
-        <p class="text-gray-500 text-sm px-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div class="flex justify-center space-x-4 mt-3">
-            <a href="#" class="text-gray-500 hover:text-black">🔗 Instagram</a>
-            <a href="#" class="text-gray-500 hover:text-black">🔗 Twitter</a>
-            <a href="#" class="text-gray-500 hover:text-black">🔗 LinkedIn</a>
-        </div>
+     <!-- Footer -->
+     <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+        <p>&copy; 2025 Donor Link - Donate Organ, Save Life</p>
     </footer>
 
 </body>
