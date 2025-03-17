@@ -53,23 +53,6 @@ Start a local server using Apache (XAMPP or LAMP recommended).
 
 Access the application in your browser: http://localhost/organ-donation
 
-# Folder Structure
-
-organ-donation/
-│-- index.php        # Homepage
-│-- auth/
-│   │-- login.php    # User login
-│   │-- register.php # User registration
-│   │-- logout.php   # User logout
-│-- config/
-│   │-- config.php   # Database connection
-│-- assets/
-│   │-- css/
-│   │-- js/
-│   │-- images/
-│-- pages/
-│   │-- dashboard.php # User dashboard (To be developed)
-│   │-- profile.php   # User profile management
 
 # Future Improvements
 
