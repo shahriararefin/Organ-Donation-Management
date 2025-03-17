@@ -20,12 +20,12 @@
     <main class="flex-grow flex items-center justify-center">
         <div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
             <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
-            <form id="loginForm">
+            <form id="loginForm" form method="post" action="../../Controller/loginController.php">
                 <div class="mb-4">
-                    <input id="username" type="text" placeholder="Username" class="input input-bordered w-full bg-orange-200 rounded-lg p-2" required>
+                    <input id="email" name="email" type="text" placeholder="Email" class="input input-bordered w-full bg-orange-200 rounded-lg p-2" required>
                 </div>
                 <div class="mb-4">
-                    <input id="password" type="password" placeholder="Password" class="input input-bordered w-full bg-orange-200 rounded-lg p-2" required>
+                    <input id="password" name="password" type="password" placeholder="Password" class="input input-bordered w-full bg-orange-200 rounded-lg p-2" required>
                 </div>
                 <button type="submit" class="btn btn-primary bg-red-500 text-white w-full rounded-lg p-4">Login</button>
             </form>
@@ -40,7 +40,7 @@
         <p>&copy; 2025 DO.ORG - Donate Organ, Save Life</p>
     </footer>
 
-    <script src="login.js"></script>
-    <script src="server.js"></script>
+    <!-- <script src="login.js"></script>
+    <script src="server.js"></script> -->
 </body>
 </html>

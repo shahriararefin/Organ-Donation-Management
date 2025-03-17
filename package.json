@@ -20,6 +20,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.21",
     "daisyui": "^5.0.2",
+    "organ-donation-management": "file:",
     "postcss": "^8.5.3"
   },
   "devDependencies": {

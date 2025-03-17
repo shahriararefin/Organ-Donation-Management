@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organ Donation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/Assets/heartlogo.png" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header
+      class="p-5 bg-white shadow-md flex justify-between items-center relative"
+    >
+      <a href="/index.html">
+        <img class="w-32" src="/Assets/DonorLink Logo.png" alt="Logo" />
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-btn"
+        class="block md:hidden text-gray-700 focus:outline-none"
+      >
+        <svg
+          class="w-8 h-8"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+
+      <!-- Navigation Menu -->
+      <!-- <nav id="menu" class="hidden md:flex space-x-4 items-center">
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left">
+                <li><a href="#" class="btn btn-primary">Home</a></li>
+                <li><a href="#" class="btn btn-outline">Register</a></li>
+                <li><a href="#" class="btn btn-outline">Organ Registration</a></li>
+                <li><a href="#" class="btn btn-outline">FAQ</a></li>
+                <li><a href="#" class="btn btn-outline">Research</a></li>
+            </ul>
+        </nav> -->
+
+      <!-- Login & Signup Buttons -->
+      <div class="hidden md:flex space-x-2">
+        <!-- <a href="/login/login.html"><button class="btn btn-secondary">Login</button></a> -->
+        <!-- <a href="/signup/signup.html"><button class="btn btn-accent">Sign Up</button></a> -->
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden flex flex-col items-center bg-white shadow-md p-4 space-y-4 absolute top-16 left-0 w-full"
+    >
+      <a href="#" class="btn btn-primary w-full text-center">Home</a>
+      <a href="#" class="btn btn-outline w-full text-center">Register</a>
+      <a href="#" class="btn btn-outline w-full text-center"
+        >Organ Registration</a
+      >
+      <a href="#" class="btn btn-outline w-full text-center">FAQ</a>
+      <a href="#" class="btn btn-outline w-full text-center">Research</a>
+      <!-- <a href="login/login.html" class="btn btn-secondary w-full text-center">Login</a>
+        <a href="/signup/signup.html" class="btn btn-accent w-full text-center">Sign Up</a> -->
+    </div>
+
+    <main class="container mx-auto my-10 px-4">
+      <div
+        class="bg-white shadow-lg rounded-lg p-8 flex flex-col md:flex-row mx-auto my-16 max-w-4xl"
+      >
+        <!-- Left Side - Illustration -->
+        <div class="w-full md:w-1/2 flex justify-center mb-4 md:mb-0">
+          <img
+            src="/Assets/Images/login.png"
+            alt="Illustration"
+            class="w-3/4 md:w-full object-cover rounded-lg"
+          />
+        </div>
+
+        <!-- Right Side - Registration Form -->
+        <div class="w-full md:w-1/2 p-6">
+          <h2 class="text-2xl font-bold text-pink-600 text-center mb-2">
+            Create new Account
+          </h2>
+          <p class="text-center text-sm mb-4">
+            Already Registered?
+            <a href="/login/login.html" class="text-blue-500">Login</a>
+          </p>
+
+          <form
+            id="registerForm"
+            form
+            method="post"
+            action="../../Controller/signupController.php"
+          >
+            <div class="mb-3">
+              <label class="block text-sm font-semibold">Full Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+                class="input input-bordered w-full bg-orange-200 rounded-lg"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="block text-sm font-semibold">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="hello@site.com"
+                class="input input-bordered w-full bg-orange-200 rounded-lg"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="block text-sm font-semibold">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="******"
+                class="input input-bordered w-full bg-orange-200 rounded-lg"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-sm font-semibold">Date of Birth</label>
+              <input
+                id="dob"
+                type="date"
+                name="dob"
+                class="input input-bordered w-full bg-orange-200 rounded-lg"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary bg-red-500 text-white w-full rounded-lg"
+            >
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="text-center my-6">
+        <button class="btn btn-primary bg-sky-400 text-white">Read More</button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+      <p>&copy; 2025 DO.ORG - Donate Organ, Save Life</p>
+    </footer>
+
+    <!-- <script src="signup.js"> </script> -->
+  </body>
+</html>
